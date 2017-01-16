@@ -11,6 +11,7 @@ html {
 }
 
 .center {
+  transform: translateX(100px) translateY(80px);
   width: 28px;
 }
 
@@ -18,10 +19,25 @@ html {
   width: 14px;
 }
 
-.hand-hour {
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
+.hand-hour {
+  transform: translateX(143px) translateY(80px);
+  transform-origin: center bottom;
+  left: 250px;
+  animation: spin 1s linear infinite;
 }
 
 .hand-minute {
-
+  transform: translateX(125px) translateY(80px);
+  transform-origin: center bottom;
+  left: 250px;
+  animation: spin 1s linear infinite;
 }
