@@ -3,41 +3,42 @@ html {
 }
 
 .clock-face {
+  position: relative;
   height: 300px;
   margin: 50px auto;
   width: 300px;
-  position: relative;
   background: transparent url("../images/clock-face.svg") no-repeat center center;
 }
 
 .center {
-  width: 28px;
   position: absolute;
   left: 45%;
   top: 140px;
+  width: 28px;
 }
 
 .hand {
   position: absolute;
   left: 47px;
-  top: 70px;
+  top: 95px;
   width: 14px;
 }
 
 .hand-hour {
   transform-origin: bottom;
-  left: 125px;
-  animation: spin 4s infinite;
+  left: 143px;
+  animation: spin 4s linear infinite;
 }
 
 .hand-minute {
   transform-origin: bottom;
-  left: 250px;
-  animation: spin 800ms infinite;
+  left: 143px;
+  top: 70px;
+  animation: spin 800ms linear infinite;
 }
 
 @keyframes spin {
-  
+
   from {
     transform: rotate(0deg);
   }
